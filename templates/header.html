@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <!-- css -->
+    <link rel="stylesheet" href="static/css/styles.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Satisfy&display=swap" rel="stylesheet">
+    <title>Mr.worldwide</title>
+</head>
+
+<body style="font-family: 'Satisfy', cursive;">
+<!-- navbar -->
+<nav class="navbar navbar-dark navbar-expand-md" style="background-color: #96BAFF; font-family: 'Lobster', cursive;">
+    <a href="{{ url_for('home') }}" class="navbar-brand" style="font-size:3.1rem; color:#EEEEEE;">Mr.Worldwide</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav" style="font-size:1.3rem;">
+            <li class="nav-item">
+                <a href="{{ url_for('home') }}" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ url_for('headlines') }}" class="nav-link">Headlines</a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ url_for('search') }}" class="nav-link">Search</a>
+            </li>
+        </ul>
+    </div>
+</nav>

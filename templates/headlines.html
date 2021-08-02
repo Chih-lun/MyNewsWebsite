@@ -1,0 +1,32 @@
+{% include "header.html" %}
+<div class="container mt-5 mb-5" style="text-align:right; padding-left:300px; padding-right:300px; padding-top:20px; padding-bottom:20px">
+    {% import "bootstrap/wtf.html" as wtf %}
+    {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+</div>
+
+
+    <div class="container mt-5 mb-5">
+
+        <div class="row d-flex justify-content-center">
+            {% for i in news %}
+            <div class="col-md-8">
+                <div class="d-flex flex-row"></div>
+                <div class="row news-card p-3 bg-white">
+                    <div class="col-md-4">
+                        <div class="feed-image"><img class="news-feed-image rounded img-fluid img-responsive" src="{{ i['urlToImage'] }}" style="height: 200px; width:340px;"></div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="news-feed-text">
+                            <h5><a href="{{ i['url'] }}" style="color:black;">{{ i['title'] }}</a></h5><span>{{ i['description'] }}<br></span>
+                            <div class="d-flex flex-row justify-content-between align-items-center mt-2">
+                                <h6 class="username">{{ i['author'] }}</h6><span class="date">{{ i['publishedAt'] }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% include "footer.html" %}

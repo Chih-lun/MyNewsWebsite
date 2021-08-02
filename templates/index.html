@@ -1,0 +1,36 @@
+{% include "header.html" %}
+
+    <!-- pictures -->
+        <section id="pictures">
+          <div id="pictures-carousel" class="carousel slide" data-ride="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active" style="background-image:url(static/assets/slide1.jpeg);padding-top:25%;padding-bottom:25%;">
+                <h1 class='pictures-content'>THIS IS MR.WORLDWIDE<h1>
+                <h2 class='pictures-content'>DISCOVER NEWEST NEWS AROUND THE WORLD</h2>
+                  <a href="{{ url_for('headlines') }}"><button type="button" class="btn btn-primary" style="margin: 20px; width:99px;">Headlines</button></a>
+                  <a href="{{ url_for('search') }}"><button type="button" class="btn btn-primary" style="margin: 20px; width:99px;">Search</button></a>
+              </div>
+              <div class="carousel-item" style="background-image:url(static/assets/slide2.jpeg);padding-top:25%;padding-bottom:25%;">
+                <h1 class='pictures-content'>HOTTEST NEWS<h1>
+                <h2 class="pictures-content">DISCOVER WORK-FRIENDLY CAFES IN LONDON</h2>
+                  <a href="{{ url_for('headlines') }}"><button type="button" class="btn btn-primary" style="margin: 20px; width:99px;">Headlines</button></a>
+                  <a href="{{ url_for('search') }}"><button type="button" class="btn btn-primary" style="margin: 20px; width:99px;">Search</button></a>
+              </div>
+              <div class="carousel-item" style="background-image:url(static/assets/slide3.jpeg);padding-top:25%;padding-bottom:25%;">
+                <h1 class='pictures-content'>NEWEST NEWS<h1>
+                <h2 class="pictures-content">DISCOVER WORK-FRIENDLY CAFES IN LONDON</h2>
+                  <a href="{{ url_for('headlines') }}"><button type="button" class="btn btn-primary" style="margin: 20px; width:99px;">Headlines</button></a>
+                  <a href="{{ url_for('search') }}"><button type="button" class="btn btn-primary" style="margin: 20px; width:99px;">Search</button></a>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#pictures-carousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#pictures-carousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          </div>
+
+        </section>
+
+{% include "footer.html" %}
